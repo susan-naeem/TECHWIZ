@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family:Arial,  sans-serif ;
+            background: black; 
+            margin: 0%;
+            padding: 0%;
+        }
+        .container{
+            width: 400px;
+            margin:50px  auto;
+            background:rgb(8, 97, 152) ;
+            padding:20px ;
+            border-radius: 8px;
+            box-shadow:0px 0px 8px  black (0,0,0,0.1) ;
+        }
+        h2{
+            text-align: center;
+            margin-bottom:20px ;
+            color: dimgrey;
+        }
+        label{
+            display: block;
+            margin-top: 10%;
+            font-weight:bold ;
+            font-size:14px ;
+        }
+
+        input,select,textarea{
+            width: 95% ;
+            padding: 8px;
+            margin-top:  5px ;
+            border: 1px solid #ccc  ;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        textarea{
+            resize: vertical;
+            height: 30px;
+        }
+
+        .rating{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 0px;
+        }
+        .rating label{
+            font-size: normal;
+        }
+        .btn{
+            margin-top :15px ;
+            width: 100%;
+            padding:10px;
+            background: lightblue;
+            border: none;
+            color: white;
+            font-size:16px ;
+            border-bottom: 4px;
+            cursor:  not-allowed;
+        }
+        .btn:hover{
+            background:lightskyblue ;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <h2>feedback Form</h2>
+        <from>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+             <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+             <label for="usertype">User Type</label>
+            <select id="usertype">
+                <option value=""> -- Select -- </option>
+                <option>Student</option>
+                 <option>Faculty</option>
+                 <option>Guest</option>
+            </select>
+
+            <label for="event">Event Attended</label>
+            <select id="event">
+            <option value=""> -- Select Event -- </option>
+            <option> Workshop - 16 september 2025</option>
+             <option> seminar - 20 september 2025</option>
+             <option> Conference - 23 september 2025</option>
+            </select>
+
+            <label> Rating </label>
+            <div class="rating">
+                <label><input type="radio" name="rate">1</label>
+                 <label><input type="radio" name="rate">2</label>
+                  <label><input type="radio" name="rate">3</label>
+                   <label><input type="radio" name="rate">4</label>
+                    <label><input type="radio" name="rate">5</label>
+            </div>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" placeholder=" Write your feedback here...."></textarea>
+            <button type="button" class="btn">Submit</button>
+
+        </from>
+    </div>
+</body>
+</html>
